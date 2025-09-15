@@ -1,0 +1,364 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --primary-orange: #FF6600;
+  --primary-dark-blue: #1a233b;
+  --secondary-light-blue: #00bfff;
+  --text-dark: #242A33;
+  --text-light: #fff;
+  --bg-light-gray: #f5f5f5;
+  --bg-dark-gray: #2c2c2c;
+  --menu-text: #070707;
+  --thumbnails-bg: #6B2B00;
+}
+
+/* Basic Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 14px 16px 14px 26px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 160%;
+  letter-spacing: 0.5%;
+}
+
+.btn-primary {
+  background: var(--primary-orange);
+  color: white;
+}
+
+/* Header Section */
+.header {
+  background-color: var(--text-light);
+  color: var(--menu-text);
+  align-items: center;
+  padding: 15px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo  {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav ul li {
+  margin-left: 25px;
+}
+
+.nav ul li a {
+  color: var(--menu-text);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: var(--primary-orange)
+}
+
+
+/* Hero Section */
+.hero {
+  background-image:  url('./images/img.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: left;
+}
+
+.hero .hero-content .avatar-two {
+  margin: 0  -10px;
+}
+
+
+.hero .customer-avatars {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.hero-content .customer-badge {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  padding: 8px 15px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0px 0px 0px -10px;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.5%;
+  margin-bottom: 30px;
+}
+
+
+/* Product Section */
+.product-section {
+  padding: 80px 0;
+  background-color: var(--text-light);
+  border-top: 1px solid #ddd;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.product-image-gallery {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-main-image {
+  width: 560px;
+  height: 605px;
+  border-radius: 10px;
+  background-color: #ffd0b082;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+
+.product-thumbnails img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.product-thumbnails img:hover,
+.product-thumbnails img.active {
+  background-color: var(--thumbnails-bg);
+}
+
+.product-details {
+  flex: 1 1 500px;
+}
+
+.product-details .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: gold;
+  margin-bottom: 10px;
+}
+.product-details .rating p {
+  font-size: 16px;
+  font-family: poppins;
+  color: var(--text-dark);
+  font-weight: 400;
+  line-height: 160%;
+}
+.product-details .rating span {
+  font-size: 18px;
+  font-family: poppins;
+  color: var(--text-dark);
+  font-weight: 600;
+  line-height: 160%;
+}
+
+
+.product-details h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 130%;
+  margin: 0;
+}
+
+.product-details .price {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 130%;
+  font-family: montserrat;
+  color: var(--thumbnails-bg);
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-details .price .old-price {
+  text-decoration: line-through;
+  font-size: 24px;
+  letter-spacing: 0.5%;
+  color: #12151A;
+  font-weight: 500;
+}
+
+.product-details .save-label {
+  background: var(--primary-orange);
+  color: var(--text-light);
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: montserrat;
+  border: none;
+  line-height: 112%;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+}
+
+.product-details .description h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 42px;
+  font-weight: 600;
+  font-family: montserrat;
+  line-height: 130%;
+}
+
+.product-details .description p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: poppins;
+  line-height: 160%;
+  letter-spacing: 0.5%;
+  color: var(--text-dark);
+}
+
+
+.product-details .add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: var(--primary-orange);
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.product-details .add-to-cart:hover {
+  background-color: #e55a00;
+}
+
+.product-details .payment-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.product-details .payment-options img {
+  height: 58px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #e55c0040;
+  margin-top: 10px;
+}
+
+.accordion-button {
+  width: 100%;
+  background-color: transparent;
+  color: #4A4C56;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  border: none;
+  text-align: left;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: montserrat ;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s;
+}
+
+
+
+.accordion-button .icon {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.accordion-button.collapsed .icon {
+  transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed) .icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0 10px;
+}
+
+.accordion-content p {
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
